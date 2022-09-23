@@ -6,16 +6,45 @@ import Categories from './pages/Categories';
 import Details from './pages/Details';
 import Meals from './pages/Meals';
 
-
 const Stack = createNativeStackNavigator();
 
 export default function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="CategoriesPages" component={Categories} />
-        <Stack.Screen name="MealsPages" component={Meals} />
-        <Stack.Screen name="DetailsPages" component={Details} />
+        <Stack.Screen name="CategoriesPages" component={Categories} 
+          options={{
+            title:"Categories",
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: "#eceff1",
+            },
+            headerTintColor: '#ffa500',
+            headerTitleStyle: {fontWeight: "bold"},
+          }} 
+        />
+        <Stack.Screen name="MealsPages" component={Meals} 
+          options={{
+            title:"Meals",
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: "#eceff1",
+            },
+            headerTintColor: '#ffa500',
+            headerTitleStyle: {fontWeight: "bold"},
+          }} 
+        />
+        <Stack.Screen name="DetailsPages" component={Details}
+          options={{
+            title:"Detail",
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: "#eceff1",
+            },
+            headerTintColor: '#ffa500',
+            headerTitleStyle: {fontWeight: "bold"},
+          }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
