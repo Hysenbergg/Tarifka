@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Categories from './pages/Categories';
-import Details from './pages/Details';
+import Details from './pages/Detail';
 import Meals from './pages/Meals';
 
 const Stack = createNativeStackNavigator();
@@ -34,7 +34,7 @@ export default function Router() {
             headerTitleStyle: {fontWeight: "bold"},
           }} 
         />
-        <Stack.Screen name="DetailsPages" component={Details}
+        <Stack.Screen name="DetailPage" component={Details}
           options={{
             title:"Detail",
             headerTitleAlign: "center",
